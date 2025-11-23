@@ -4,14 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <main>
+        <div class="header">
+            <h1><i class="fas fa-cloud-sun"></i> Weather</h1>
+        </div>
         <form>
-            <input type="text" id="name" placeholder="Enter city name..." autocomplete="off">
+            <div class="input-container">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" id="name" placeholder="Enter city name..." autocomplete="off">
+            </div>
             <button type="submit">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -23,31 +31,45 @@
                 <img src="https://flagsapi.com/GB/shiny/32.png">
             </figure>
 
-            <figure class="temperature">
-                <img src="https://openweathermap.org/img/wn/10d@4x.png">
-                <figcaption>
-                    <span>31</span>
-                    <sup>o</sup>
-                </figcaption> 
-            </figure>
-            <p class="description">overcast clouds</p>
-            <ul>
-                <li>
-                    <span>clouds</span>
-                    <i class="fa-solid fa-cloud"></i>
-                    <span id="clouds">98</span>%
-                </li>
-                <li>
-                    <span>humidity</span>
-                    <i class="fa-solid fa-droplet"></i>
-                    <span id="humidity">98</span>%
-                </li>
-                <li>
-                    <span>pressure</span>
-                    <i class="fa-solid fa-gauge"></i>
-                    <span id="pressure">1011</span>hPa
-                </li>
-            </ul>
+            <div class="weather-main">
+                <figure class="temperature">
+                    <img src="https://openweathermap.org/img/wn/10d@4x.png">
+                    <figcaption>
+                        <span>31</span>
+                        <sup>°C</sup>
+                    </figcaption> 
+                </figure>
+                <p class="description">overcast clouds</p>
+            </div>
+            <div class="weather-details">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <div class="detail-info">
+                        <span class="detail-label">Clouds</span>
+                        <span class="detail-value"><span id="clouds">98</span>%</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+                    <div class="detail-info">
+                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value"><span id="humidity">98</span>%</span>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fa-solid fa-gauge"></i>
+                    </div>
+                    <div class="detail-info">
+                        <span class="detail-label">Pressure</span>
+                        <span class="detail-value"><span id="pressure">1011</span> hPa</span>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
